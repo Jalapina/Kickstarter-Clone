@@ -1,0 +1,65 @@
+<nav id="nav-bar">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">DreamStarter</a>
+    <ul class="right hide-on-med-and-down">
+      <!--<li><input id="search_bar" type="text" name="seach" placeholder="Search"></li>-->
+      <li><a href="/dreamstart/dream">Create a Project</a></li>
+      <li><a href="/">Explore</a></li>
+      <!-- Dropdown Trigger -->
+      <% unless session[:id] %>
+
+      <li><a class="waves-effect waves-light" href="#modal2" >Login</a></li>
+      <li><a class="waves-effect waves-light" href="#modal1" >Sign Up</a></li>
+
+      <% else %>
+
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+
+      <% end %>
+
+    </ul>
+  </div>
+</nav>
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="/users">View Profile</a></li>
+  <li><a href="/">Your Projects</a></li>
+  <li><a href="/logout">Log Out</a></li>
+</ul>
+
+ <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Sign Up</h4>
+        <form action="/users" method="POST">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <input type="text" name="user[name]" placeholder="Name">
+          <input type="text" name="user[email]" placeholder="Email">
+          <input type="password" name="user[password]" placeholder="Passoword">
+          <input type="password" name="user[password_confirmation]" placeholder="Password Confirm">
+          <input type="submit" class="btn" value="Sign Up">
+        </form>
+        <div class="error-messages">
+        <% if flash[:errors] %>
+
+          <% flash[:errors].each do |error| %>
+              <span class="error-message"><%= error %></span>
+          <% end %>
+
+        <% end %>
+        </div>
+    </div>
+  </div>
+
+
+   <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4>
+        <form action="/sessions" method="POST">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <input type="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <input type="submit" class="btn" value="Login">
+        </form>
+    </div>
+    
+  </div>

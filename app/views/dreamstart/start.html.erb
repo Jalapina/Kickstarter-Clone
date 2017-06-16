@@ -1,0 +1,38 @@
+<style>
+    body{
+        background-image: url("https://images.fineartamerica.com/images-medium-large-5/fresh-paint-2-jane-davies.jpg")
+    }
+</style>
+
+<div id="wrapper-2">
+
+    <h2 class="white-text">Get Started</h2>
+
+    <form class="category" action="/dreamstart/new">
+
+        <input black-text type="text" placeholder="Title" name="title">
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>Select Category</option>
+                <% @categories.each do |category| %>
+                <option value="<%= category %>"><%= category %></option>
+                <% end %>
+            </select>
+        <label>Choose a Category:</label>
+        </div>
+
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>Select Your Country</option>
+                <% @countries.each do |country| %>
+                <option value="<%= country %>"><%= country %></option>
+                <% end %>
+            </select>
+            <label>Select Your Residence</label>
+        </div>
+
+        <center><input class="red btn" type="submit" value="Continue"></center>
+
+    </form>
+
+ </div>

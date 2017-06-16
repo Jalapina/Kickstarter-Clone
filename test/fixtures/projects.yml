@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  category: MyString
+  residence: MyString
+  goal: 9.99
+  duration: 1
+  location: MyString
+  description: MyText
+  risk: MyText
+  user_id: 
+  backers_id: 
+
+two:
+  title: MyString
+  category: MyString
+  residence: MyString
+  goal: 9.99
+  duration: 1
+  location: MyString
+  description: MyText
+  risk: MyText
+  user_id: 
+  backers_id: 
