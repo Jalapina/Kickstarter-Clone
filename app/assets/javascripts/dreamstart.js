@@ -3,15 +3,7 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on('turbolinks:load',function(){
-    
-    // $('.carousel.carousel-slider').carousel({fullWidth: true});
 
-  $('.slider').slider({
-    indicators:false,
-    height:600
-});
- $('select').material_select();
-
- $('ul.tabs').tabs();
+ 
   
 });

@@ -1,0 +1,20 @@
+<div id="learn-container">
+    
+    <h1 class="white-text">Bring Your Dreams To Life!</h1>
+    <% if session[:id] %>
+    <a class="waves-effect red waves-light btn-large" href="/projects/start">Start Dream</a>
+    <% else %>
+    <li><a class="waves-effect red btn-large waves-light" href="#modal2" >Login</a></li>
+    <h4 class="white-text">or</h4>
+    <li><a class="waves-effect red btn-large waves-light" href="#modal1" >Sign Up</a></li>
+    <% end %>
+
+    <h4 class="white-text">Categories to choose from</h4>
+
+    <div class="categories">
+        <% @categories.each do |category| %>
+            <span class="btn"><%= category %></span>
+        <% end %>
+    </div>
+    
+</div>

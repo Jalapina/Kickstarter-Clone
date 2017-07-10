@@ -1,0 +1,50 @@
+<div id="show-container">
+    
+</div>
+
+<div class="row">
+    <div class="col s12">
+        <ul id="project-show-tabs" class="tab tabs">
+            <li class="tab col s3"><a class="active" href="#project-about-swipe">About this project</a></li>
+            <li class="tab col s3"><a href="#project-faq-swipe">FAQ</a></li>
+            <li class="tab col s3"><a href="#project-comments-swipe">Comments</a></li>
+            <li class="tab col s3"><a href="#project-community-swipe">Community</a></li>
+        </ul>
+    </div>
+
+
+
+    <div id="project-about-swipe" class="col s12" >
+        
+        <div class="project-about">
+            <div class="inner-project-about">
+                <p>About this project</p>
+                <p><%= @project.story.description %></p>
+                <p>Risk and Challanges</p>
+                <p><%= @project.story.risk %></p>
+            </div>
+            <div class="inner-project-rewards" >
+                <p>Support This Project</p>
+            </div>
+        </div>
+    </div>
+    <div id="project-faq-swipe" class="col s12 " >
+        
+        <div class="project-faq">
+            <h4>Ask a Question</h4>
+        </div>
+    </div>
+    <div id="project-comments-swipe" class="col s12 " >
+
+        <div class="project-comments">
+            <h4>Comment</h4>
+        </div>
+
+    </div>
+    <div id="project-community-swipe" class="col s12" >
+        
+        <div class="project-community">
+            <h4>People Backing This Project</h4>
+        </div>
+    </div>
+</div>

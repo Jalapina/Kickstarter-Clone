@@ -14,6 +14,7 @@
 // = require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require owl.carousel
 
 $(document).on('turbolinks:load',function(){
 

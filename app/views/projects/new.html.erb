@@ -1,0 +1,231 @@
+<center>
+    <div class="row">
+    <div class="col s12">
+    <ul id="tabs-swipe-demo" class="tabs">
+        <li class="tab col s3"><a class="active" href="#basic-swipe">Basics</a></li>
+        <li class="tab col s3"><a href="#story-swipe">Story</a></li>
+        <li class="tab col s3"><a href="#rewards-swipe">Rewards</a></li>
+        <li class="tab col s3"><a href="#account-swipe">Account</a></li>
+    </ul>
+    </div>
+    <form id="launch-button" action="/projects/<%= @project.id %>/launch" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" value=1 name="project[launch]">
+        <input type="submit" class="red btn waves-effect" value="Launch Project">
+    </form>
+</center>
+
+    <div id="project-new-wrapper">
+        <div id="basic-swipe" class="project-form">
+            <form  id="form" action="/projects/update/<%= @project.id %>" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">
+                
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+                <%= image_tag @project.image_url(:thumb).to_s %>
+
+                <div class="file-field input-field ">
+                    <div class="btn">
+                        <span>File</span>
+                        <input type="file" name="project[image]" multiple>
+                    </div>
+                    
+                    <div class="file-path-wrapper" >
+                        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" value="<%= @project.title %>" name="project[title]" class="validate">
+                        <label for="last_name">Title</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" name="project[blur]" class="materialize-textarea"><%= @project.blur %></textarea>
+                        <label for="textarea1">Short Blurb</label>
+                    </div>
+                </div>
+
+                <div class="input-field col s8">
+                    <select name="project[category]">
+                        <% unless @project.category %>
+                            <option value="" disabled selected>Choose your option</option>
+                        <% else %>
+                            <option value="<%= @project.category %>"><%= @project.category %></option>
+                        <% end %>
+                        
+                        <% @categories.each do|category| %>
+                            <option value="<%= category %>"><%= category %></option>
+                        <% end %>
+                    </select>
+                    <label>Select Category</label>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" value="<%= @project.location %>" name="project[location]" class="validate">
+                        <label for="last_name">Project Location</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="number" value="<%= @project.goal %>" name="project[goal]" class="validate">
+                        <label for="last_name">Funding Goal</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="number" value="<%= @project.duration %>" name="project[duration]" class="validate">
+                        <label for="last_name">Funding Duration</label>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    
+                </div>
+
+            </form>
+        </div>
+
+        <div id="story-swipe" class="project-form">
+
+            <form action="/stories/update/<%= @project.id %>" method="POST">
+
+                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>File</span>
+                        <input type="file">
+                    </div>
+
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Upload a video">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="icon_prefix2" name="story[description]" class="materialize-textarea"><%= @story.description %></textarea>
+                        <label for="icon_prefix2">Description</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="icon_prefix2"name="story[risk]" class="materialize-textarea"><%= @story.risk %></textarea>
+                        <label for="icon_prefix2">Risk and Challanges</label>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    
+                </div>
+
+            </form>
+        </div>
+
+        <div id="rewards-swipe" class="project-form">
+            
+            <div id="reward-display">
+                <% @rewards.each do|reward| %>
+                <h3 id="count"></h3>
+                <p class="rewards"><%= reward.title %></p>
+                <p class="rewards"><%= reward.pledged %></p>
+                <p class="rewards"><%= reward.description %></p>
+                <p class="rewards"><%= reward.limit %></p>
+                <p class="rewards"><%= reward.delivery %></p>
+                <% end %>
+            </div>
+        
+            <form action="/rewards" method="POST">
+
+             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="first_name2"  name="reward[title]" type="text" class="validate">
+                        <label class="active" for="first_name2">Title</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input  name="reward[pledged]" id="first_name2" type="number" class="validate">
+                        <label class="active" for="first_name2">Pledge Amount</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" name="reward[description]" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Description</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input  name="reward[limit]" id="first_name2" type="number" class="validate">
+                        <label class="active" for="first_name2">Limit</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="datepicker1"  name="reward[delivery]" type="date" class="datepicker">
+                        <label for="datepicker1">Estimate Delivery</label>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    
+                </div>
+
+            </form>
+        </div>
+
+        <div id="account-swipe" class="project-form">
+            <form action="/users" method="POST">
+                 
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+                <input type="hidden" name="_method" value="put">
+
+                 <div class="file-field input-field ">
+                    <div class="btn">
+                        <span>File</span>
+                        <input type="file" multiple>
+                    </div>
+                    
+                    <!--<div class="file-path-wrapper" >-->
+                        <input class="file-path validate" type="text" placeholder="Upload an image">
+                    <!--</div>-->
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="first_name2" name="user[name]" value="<%= @user.name %>" type="text" class="validate">
+                        <label class="active" for="first_name2">Name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" name="user[bio]" class="materialize-textarea"><%= @user.bio %></textarea>
+                        <label for="textarea1">Biography</label>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    
+                </div>
+                
+            </form>
+        </div>
+    </div>    
+    </div>   

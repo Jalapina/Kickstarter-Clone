@@ -3,7 +3,7 @@
     <a href="/" class="brand-logo">DreamStarter</a>
     <ul class="right hide-on-med-and-down">
       <!--<li><input id="search_bar" type="text" name="seach" placeholder="Search"></li>-->
-      <li><a href="/dreamstart/dream">Create a Project</a></li>
+      <li><a href="/projects/learn">Create a Project</a></li>
       <li><a href="/">Explore</a></li>
       <!-- Dropdown Trigger -->
       <% unless session[:id] %>
@@ -23,7 +23,7 @@
 
 <ul id="dropdown1" class="dropdown-content">
   <li><a href="/users">View Profile</a></li>
-  <li><a href="/">Your Projects</a></li>
+  <li><a href="/users/<%= session[:id] %>/projects">Your Projects</a></li>
   <li><a href="/logout">Log Out</a></li>
 </ul>
 

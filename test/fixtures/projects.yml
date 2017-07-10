@@ -6,11 +6,10 @@ one:
   residence: MyString
   goal: 9.99
   duration: 1
-  location: MyString
-  description: MyText
-  risk: MyText
+  blur: MyText
   user_id: 
-  backers_id: 
+  location: MyString
+  launch: false
 
 two:
   title: MyString
@@ -18,8 +17,7 @@ two:
   residence: MyString
   goal: 9.99
   duration: 1
-  location: MyString
-  description: MyText
-  risk: MyText
+  blur: MyText
   user_id: 
-  backers_id: 
+  location: MyString
+  launch: false

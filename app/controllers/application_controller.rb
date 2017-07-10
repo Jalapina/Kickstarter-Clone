@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  # puts "=========>>>>>>>", current_page?(my_path)
   before_action :variables
+  # before_action :project_id_session
 
   def current_user
 
@@ -15,6 +15,12 @@ class ApplicationController < ActionController::Base
     end
 
   end
+
+  # def project_id_session
+  #   if current_page?(:controller => 'dreamstart', :action => 'index')
+  #     # session[:project_id].clear
+  #   end
+  # end
 
   def variables
     @countries = ["Australia","Canada","France","Mexico","Spain","Norway","Netherlands","United States"]

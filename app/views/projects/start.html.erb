@@ -1,0 +1,36 @@
+<div id="start-container">
+
+    <div class="project-start">
+        <h2 class="white-text">Get Started</h2>
+
+        <form class="category" action="/projects" method="POST" >
+
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            
+            <input black-text type="text" placeholder="Title" name="project[title]">
+            <div class="input-field col s12">
+                <select name="project[category]">
+                    <option value="" disabled selected>Select Category</option>
+                    <% @categories.each do |category| %>
+                    <option value="<%= category %>"><%= category %></option>
+                    <% end %>
+                </select>
+            <label>Choose a Category:</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select name="project[residence]">
+                    <option value="" disabled selected>Select Your Country</option>
+                    <% @countries.each do |country| %>
+                    <option value="<%= country %>"><%= country %></option>
+                    <% end %>
+                </select>
+                <label>Select Your Residence</label>
+            </div>
+
+            <center><input class="red btn" type="submit" value="Continue"></center>
+
+        </form>
+    </div>
+
+ </div>

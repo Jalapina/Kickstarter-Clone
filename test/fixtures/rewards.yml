@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  pledged: 1
+  description: MyText
+  shipping: false
+  limit: 1
+  delivery: 2017-06-18
+  dream_id: 
+
+two:
+  title: MyString
+  pledged: 1
+  description: MyText
+  shipping: false
+  limit: 1
+  delivery: 2017-06-18
+  dream_id: 

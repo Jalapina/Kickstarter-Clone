@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password 
-  
+  has_one  :pictures, as: :imageable
+  has_many :projects, dependent: :destroy
   has_many :followings, class_name: 'Follow', :foreign_key => 'user_id'
   has_many :followers , through: :followings
 

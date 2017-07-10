@@ -1,0 +1,25 @@
+<div class="backers-container">
+
+    <div class="backers-header">
+        <div class="backer-project-info">
+            <a href="/">Title</a>
+        </div>
+    </div>  
+
+    <div class="backers-option">
+        <div class="backers-option-container">
+            <h2>Support this project</h2>
+            <div class="backers-default">
+                <p>Back this project without a reward</p>
+            </div>
+            <% @rewards.each do|reward| %>
+                <div class="backers-rewards-option">
+                    <p><%= reward.pledged %></p>
+                    <p><%= reward.title %></p>
+                    <p><%= reward.description %></p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+
+</div>

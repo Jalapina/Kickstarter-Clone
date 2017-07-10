@@ -1,15 +1,41 @@
 Rails.application.routes.draw do
-  resource :users
-  root 'dreamstart#index'
 
-  post 'sessions' => 'sessions#create'
-  get 'logout' => 'sessions#destroy'
-  get 'dreamstart/new'
-  get 'dreamstart/dream'
-  get 'dreamstart/start'
+  #Users Routes
 
+    resource :users
+    get 'users/:id/projects' => 'users#projects'
+  
+  #Sessions Routes
+    
+    post 'sessions' => 'sessions#create'
+    get 'logout' => 'sessions#destroy'
 
-  # root 'dream_starter_test#index'
+  #Projects Routes
+
+    root 'projects#index'
+
+    get 'projects/learn'
+    get 'projects/start'
+    get 'projects/new/:id' => 'projects#new'
+    get 'projects/show/:id' => 'projects#show'
+
+    post 'projects/' => 'projects#create'
+    post 'projects/update/:id' => 'projects#update'
+    post 'projects/:id/launch' => 'projects#launch'
+  
+  #Rewards Routes
+  
+    post 'rewards' => 'rewards#create'
+    post 'rewards/update'
+
+  #Storys Routes
+
+    post 'stories/update/:id' => 'stories#update'
+
+  #Backers Routes
+
+    get 'projects/backers/:id/new' => 'backers#new'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

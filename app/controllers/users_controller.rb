@@ -2,6 +2,16 @@ class UsersController < ApplicationController
   def new
   end
 
+  def update
+    
+    @user = User.find(session[:id])
+
+    @user.update user_params
+
+    redirect_to :back
+
+  end
+
   def create
   
     @user = User.new user_params
@@ -16,10 +26,14 @@ class UsersController < ApplicationController
       render json: {result:flash[:errors]}
     end
   
-   end
+  end
+
+  def projects
+    @projects = Project.where(user:session[:id])
+  end
 
   private
     def user_params
-      params.require(:user).permit(:name,:email,:password,:password_confirmation)
+      params.require(:user).permit(:name,:email,:password,:password_confirmation,:bio)
     end
 end

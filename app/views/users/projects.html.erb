@@ -1,0 +1,5 @@
+<div class="users-projects">
+    <% @projects.each do|project| %>
+        <p> <a href="/projects/new/<%= project.id %>"><%= project.title %></a> </p>
+    <% end %>
+</div>
