@@ -1,13 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 4.2.7
+ruby 2.3.1
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+gem 'web-console', '~> 2.0'
+gem 'hirb'
+gem 'carrierwave', '~> 1.0'
+gem 'rmagick'
+gem 'materialize-sass'
+gem 'owlcarousel-rails'
 
 * Configuration
 
