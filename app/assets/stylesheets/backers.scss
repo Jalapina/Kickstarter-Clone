@@ -2,38 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.backers-container{
-    height: 100%;
-    .backers-header{
-        background-color: seagreen;
-        height: 25%;
-        .backer-project-info{
-            background-color: saddlebrown;
-            width: 50%;
-            margin: auto;
-            font-size: 30px;
-            text-align: center;
-            }
-    }
-    .backers-option{
-        height: 75%;
-        background-color: bisque;
-        .backers-option-container h2{
-            margin: 0px 0px 20px 48px;
-        }
-        .backers-option-container{
-            background-color: aquamarine;
-            width: 90%;
-            margin: auto;
-            // height: 1%;
-            .backers-default , .backers-rewards-option{
-                background-color: aliceblue;
-                height: 30%;
-                width: 61%;
-                font-size: 20px;
-                padding: 21px 0px 0px 77px;
-                margin: 3px 0px 0px 42px;
-            }
-        }
-    }
-}
+// .backers-container{
+//     height: 100%;
+//     .backers-header{
+//         background-color: seagreen;
+//         height: 25%;
+//         .backer-project-info{
+//             background-color: saddlebrown;
+//             width: 50%;
+//             margin: auto;
+//             font-size: 30px;
+//             text-align: center;
+//             }
+//     }
+//     .backers-option{
+//         height: 75%;
+//         background-color: bisque;
+//         .backers-option-container h2{
+//             margin: 0px 0px 20px 48px;
+//         }
+//         .backers-option-container{
+//             background-color: aquamarine;
+//             width: 90%;
+//             margin: auto;
+//             // height: 1%;
+//             .backers-default , .backers-rewards-option{
+//                 background-color: aliceblue;
+//                 height: 30%;
+//                 width: 61%;
+//                 font-size: 20px;
+//                 padding: 21px 0px 0px 77px;
+//                 margin: 3px 0px 0px 42px;
+//             }
+//         }
+//     }
+// }
