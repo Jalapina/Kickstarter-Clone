@@ -31,47 +31,41 @@
     </ul>
 </div>
 
-<div id="newest-project">
+<div id="projects-list">
+
   <h2>Newest Projects</h2>
-  <div class="owl-carousel" >
+  
+  <div class="owl-carousel owl-theme">
     
     <% @projects.each do|project| %>
-      <div class="project-display">
-        <%= image_tag project.image_url.to_s, :class => "project-image" %>
+      <div class="project-card card-panel hoverable" >
+
+        <div class="image-wrapper">
+            <%= image_tag project.image_url.to_s, :class => "project-image" %>
+            <!-- <div class="project-image">
+
+            </div> -->
+        </div>
         
-        <div class="inner-project-index">
+        <div class="project-info">
+                    
+          <a href="/"><p><%= project.category %></p></a>
+            
+          <a href="/projects/show/<%= project.id %>"><h5><%= project.title %></h5></a>
 
-          <div class="project-index-category">          
-            <a href="/"><p><%= project.category %></p></a>
-          </div>
-          
-          <div class="project-index-title">
-            <a href="/projects/show/<%= project.id %>"><h5><%= project.title %></h5></a>
-          </div>
-
-          <div class="project-index-user">
-            <a href="<%= project.user_id %>"><p>By: <%= project.user.name %></p></a>
-          </div>
-
+          <a href="users/<%= project.user_id %>/show"><p>By: <%= project.user.name %></p></a>
+            
           <div class="progress">
               <div class=" red determinate" style="width: 70%"></div>
           </div>
 
-          <div class="project-index-blur">
-            <p><%= project.blur %></p>
-          </div>
-          
-          <div class="project-index-goal">
-            <p><%= project.goal %></p>
-          </div>
-          
-          <div class="project-index-funded">
-            <p>0% Funded</p>
-          </div>
-
-          <div class="project-index-duration">
-            <p><%= project.duration %></p>
-          </div>
+          <p class="truncate"><%= project.blur %></p>
+            
+          <p><%= project.goal %></p>
+              
+          <p>0% Funded</p>
+            
+          <p><%= project.duration %></p>   
           
         </div>
         
@@ -79,4 +73,5 @@
     <% end %>
 
   </div>
+
 </div>

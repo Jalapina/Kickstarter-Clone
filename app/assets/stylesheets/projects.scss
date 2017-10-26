@@ -4,130 +4,160 @@
 
 //Projects home page 
 
-// #newest-project h2{
-//     margin: 0px 0px 10px 16px;
-// }
+// #projects-list{
+//     background-color: darkkhaki;
 
-// #newest-project{
-//     width: 100%;
-//     padding-left: 30px;
 //     .owl-item{
-//     margin: 0px 0px 0px 14px;
-//     padding: 2px;
-//     }
-//     .project-display{
-//         // background-color: red;
-//         // height: 500px;
-//         width: 335px;
-//         box-shadow: -1px 3px 7px 3px #888878;
-//         .project-image{
-//             padding: 1px;
-//             // height: 50%;
-//             width: 100%;
+//         background-color: burlywood;
+//         height: 600px;
+//         image-wrapper{
+//             background-color: darkmagenta;
 //         }
-//         .inner-project-index{
-//             // background-color: yellow;
-//             // height: 210px;
-//             width: 325px;
-//             margin: 6px 0px 0px 5px;
-//             .project-index-category{
-//                 // background-color: darkgoldenrod;
-//                 // height: 15%;
-//                 width: 100%;
-//             }
-//             .project-index-title{
-//                 // background-color: white;
-//                 width: 100%;
-//             }
-//             .project-index-user{
-//                 // background-color: salmon;
-//                 width: 100%;
-//             }
-//             .project-index-blur{
-//                 // background-color: beige;
-//                 // height: 15%;
-//                 width: 100%;
-//             }
-//             .project-index-goal{
-//                 // background-color: blue;
-//                 width: 100%;
-//                 // height: 11%;
-//             }
-//             .project-index-funded{
-//                 // background-color: sienna;
-//                 width: 100%;
-//                 // height: 12%;
-//             }
-//             .project-index-duration{
-//                 // background-color: teal;
-//                 width: 100%;
-//                 // height: 12%;
-//             }
-//         }
-// }
-// }
-
-// //Projects Learn Page
-// #learn-container{
-//     text-align: center;
-//     .categories{
-//         margin: 18px 242px 0px 243px;
-//         padding: 20px 9px 23px 42px;
 //     }
+
 // }
 
-// //Projects Start Page
-// #start-container{
-//     // background-color: darkcyan;
-//     padding: 0px 0px 0px 443px;
-//     // height: 500px;
-//     .category{
-//         width: 50%;
-//     }
-// }
+#newest-project h2{
+    margin: 0px 0px 10px 16px;
+}
 
-// //Projects New Page
+#newest-project{
+    width: 100%;
+    padding-left: 30px;
+    .owl-item{
+    margin: 0px 0px 0px 14px;
+    padding: 2px;
+    }
+    .project-display{
+        // background-color: red;
+        // height: 500px;
+        width: 335px;
+        box-shadow: -1px 3px 7px 3px #888878;
+        
+        .inner-project-index{
+            background-color: yellow;
+            // height: 210px;
+            width: 325px;
+            margin: 6px 0px 0px 5px;
+            .project-index-category{
+                // background-color: darkgoldenrod;
+                // height: 15%;
+                width: 100%;
+            }
+            .project-index-title{
+                // background-color: white;
+                width: 100%;
+            }
+            .project-index-user{
+                // background-color: salmon;
+                width: 100%;
+            }
+            .project-index-blur{
+                // background-color: beige;
+                // height: 15%;
+                width: 100%;
+            }
+            .project-index-goal{
+                // background-color: blue;
+                width: 100%;
+                // height: 11%;
+            }
+            .project-index-funded{
+                // background-color: sienna;
+                width: 100%;
+                // height: 12%;
+            }
+            .project-index-duration{
+                // background-color: teal;
+                width: 100%;
+                // height: 12%;
+            }
+        }
+}
+}
 
-// #project-new-wrapper{
-//     min-height: 100%;
-//     width: 750px;
-//     padding: 0px 0px 5px 137px;
-//     margin: 0 auto;
-//     border-style: solid;
-//     border-width: 1px;
-//     box-shadow: 10px 10px 5px #888878;
-//     position: relative;
-//     .project-form{
-//         padding: 1px;
-//         width: 500px;
-//         min-height: 95%;
-//     }
+.image-wrapper{
+    // background-color: salmon;
+    width: 90%;
+    height: 215px;
+    /* padding: 87px 26px 59px 28px; */
+    margin: 0px 0px 0px 10px;
+    .project-image{
+        // display: inline-block
+        // background-color: seagreen;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.project-card{
+    // background-color: salmon;
+    height: 490px;
+    padding: 5px;
+    margin: 10px;
+}
+
+//Projects Learn Page
+#learn-container{
+    text-align: center;
+    .categories{
+        margin: 18px 242px 0px 243px;
+        padding: 20px 9px 23px 42px;
+    }
+}
+
+//Projects Start Page
+#start-container{
+    // background-color: darkcyan;
+    padding: 0px 0px 0px 443px;
+    // height: 500px;
+    .category{
+        width: 50%;
+    }
+}
+
+//Projects New Page
+
+#project-new-wrapper{
+    min-height: 100%;
+    width: 750px;
+    padding: 0px 0px 5px 137px;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 10px 10px 5px #888878;
+    position: relative;
+    .project-form{
+        padding: 1px;
+        width: 500px;
+        min-height: 95%;
+    }
     
-// }
+}
 
-// //Projects Show Page
-// #show-container{
-//     background-color: darkgreen;
-//     height: 100%;
-// }
+//Projects Show Page
+#show-container{
+    background-color: darkgreen;
+    height: 100%;
+}
 
-// #project-about-swipe{
-//     background-color: skyblue;
-//     .project-about{
-//         background-color: tomato;
-//         overflow: auto;
-//         .inner-project-about{
-//             background-color: seagreen; 
-//             float: left;
-//             width: 65%;
-//         }
-//         .inner-project-rewards{
-//             background-color: beige;
-//             display: inline-block;
-//             width: 35%;
-//         }
-//     }
-// }
+#project-about-swipe{
+    background-color: skyblue;
+    .project-about{
+        background-color: tomato;
+        overflow: auto;
+        .inner-project-about{
+            background-color: seagreen; 
+            float: left;
+            width: 65%;
+        }
+        .inner-project-rewards{
+            background-color: beige;
+            display: inline-block;
+            width: 35%;
+        }
+    }
+}
 
 
 

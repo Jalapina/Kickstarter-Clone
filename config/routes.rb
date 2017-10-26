@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
     resource :users
     get 'users/:id/projects' => 'users#projects'
+    get 'users/:id/show' => 'users#show'
+    
   
   #Sessions Routes
     

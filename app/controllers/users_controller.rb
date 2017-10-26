@@ -28,6 +28,11 @@ class UsersController < ApplicationController
   
   end
 
+  def show
+    # @user = User.find(params[:id])
+    # @projects = Project.where()
+  end
+
   def projects
     @projects = Project.where(user:session[:id])
   end
