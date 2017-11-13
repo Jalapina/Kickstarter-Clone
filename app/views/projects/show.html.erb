@@ -1,10 +1,15 @@
 <div id="show-container">
 
-    <div class="project" ></div>
+    <div class="project" >
+        <h1> <%= @project.title %> </h1>
+        <div>
+            <%= image_tag @project.image_url.to_s %>
+        </div>
+    </div>
     
 </div>
 
-<div class="row">
+<div class="row project-description">
     <div class="col s12">
         <ul id="project-show-tabs" class="tab tabs">
             <li class="tab col s3"><a class="active" href="#project-about-swipe">About this project</a></li>
@@ -22,7 +27,7 @@
             <div class="inner-project-about">
                 <h2>About this project</h2>
                 <p><%= @project.story.description %></p>
-                <h3>Risk and Challanges</h3>
+                <!-- <h3>Risk and Challanges</h3> -->
                 <p><%= @project.story.risk %></p>
             </div>
             <div class="inner-project-rewards" >
