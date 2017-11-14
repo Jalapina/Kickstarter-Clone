@@ -1,9 +1,11 @@
+<div class="all-container-">
+
 <div id="show-container">
 
     <div class="project" >
         <h1> <%= @project.title %> </h1>
-        <div>
-            <%= image_tag @project.image_url.to_s %>
+        <div class="image_wrapper_2">
+            <%= image_tag @project.image_url.to_s, :class => "project-image-2" %>
         </div>
     </div>
     
@@ -55,4 +57,6 @@
             <h4>People Backing This Project</h4>
         </div>
     </div>
+</div>
+
 </div>
