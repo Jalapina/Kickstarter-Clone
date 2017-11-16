@@ -3,11 +3,19 @@
 <div id="show-container">
 
     <div class="project" >
+            
         <h1> <%= @project.title %> </h1>
         <div class="image_wrapper_2">
             <%= image_tag @project.image_url.to_s, :class => "project-image-2" %>
         </div>
+
+        <div class="project-progress">
+            
+        </div>
+
     </div>
+
+    
     
 </div>
 
