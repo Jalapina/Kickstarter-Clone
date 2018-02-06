@@ -1,0 +1,13 @@
+current directory: /vagrant/Kickstarter_clone/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
+/home/vagrant/.rbenv/versions/2.4.2/bin/ruby -r ./siteconf20180206-26867-1jb69pw.rb extconf.rb
+creating Makefile
+
+current directory: /vagrant/Kickstarter_clone/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /vagrant/Kickstarter_clone/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /vagrant/Kickstarter_clone/vendor/bundle/ruby/2.4.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install
